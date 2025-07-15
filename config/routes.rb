@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  
+  every :week, at: '5:05 pm', on: [:monday, :tuesday, :wednesday, :thursday, :friday] do
+    rake "email:send_daily_email"
+  end
 end
