@@ -18,3 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+every :week, at: '5:05 pm', on: [:monday, :tuesday, :wednesday, :thursday, :friday] do
+  rake "email:send_daily_email"
+end
