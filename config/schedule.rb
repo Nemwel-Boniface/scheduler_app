@@ -18,6 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :environment, "development"
+set :output, "log/cron.log"
+
 
 every :week, at: '5:05 pm', on: [:monday, :tuesday, :wednesday, :thursday, :friday] do
   rake "email:send_daily_email"
